@@ -1,0 +1,60 @@
+body {
+	background-color:thistle;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	top: -50px;
+	left: 0;
+	position: fixed;
+	animation: ease-in;
+	animation-iteration-count: infinite;
+  animation-name: fall;
+	width: 100px;
+	height: 100px;
+}
+
+.image {
+	animation: ease-in;
+	width: 100px;
+	height: 100px;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+  animation-name: rotate;
+	font-size: 50px;
+}
+
+@keyframes fall {
+	from {
+		transform: translateY(-10vh);
+		opacity: 1;
+	}
+
+  to {
+		transform: translateY(150vh);
+		opacity: 0;
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(1080deg);
+	}
+}

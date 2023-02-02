@@ -1,0 +1,16 @@
+{
+	"maindishes": {
+		"blacknoodle": {
+			"korean": "짜장면",
+			"image": "/images/blacknoodle.png"
+		},
+		"sushi": {
+			"korean": "초밥",
+			"image": "/images/sushi.png"
+		},
+		"waffle": {
+			"korean": "와플",
+			"image": "/images/waffle.png"
+		}
+	}
+}
