@@ -1,5 +1,16 @@
+@font-face {
+	font-family: 'BMJUA';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
-	background-color:thistle;
+	font-family: 'BMJUA';
+	color: rgb(44, 39, 39);
+	width: 100vw;
+	height: 100vh;
+	background-color:rgba(255, 198, 219, 0.836);
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -10,51 +21,120 @@ body {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	display: flex;
 	padding: 0;
 	margin: 0;
 }
 
-.container {
-	top: -50px;
-	left: 0;
-	position: fixed;
-	animation: ease-in;
-	animation-iteration-count: infinite;
-  animation-name: fall;
-	width: 100px;
-	height: 100px;
-}
+@media screen and (min-width: 512px) and (max-width: 1024px) {
 
-.image {
-	animation: ease-in;
-	width: 100px;
-	height: 100px;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
-  animation-name: rotate;
-	font-size: 50px;
-}
-
-@keyframes fall {
-	from {
-		transform: translateY(-10vh);
-		opacity: 1;
+	.container {
+		top: -50px;
+		left: 0;
+		position: fixed;
+		animation: ease-in;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-name: fall;
+		width: 100px;
+		height: 100px;
+	}
+	
+	.image {
+		animation: ease-in;
+		width: 200px;
+		height: 200px;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-name: rotate;
+	}
+	
+	@keyframes fall {
+		from {
+			transform: translateY(-10vh);
+			opacity: 1;
+		}
+	
+		to {
+			transform: translateY(100vh);
+			opacity: 0;
+		}
+	}
+	
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+	
+		to {
+			transform: rotate(1080deg);
+		}
 	}
 
-  to {
-		transform: translateY(150vh);
-		opacity: 0;
+	.curtain {
+		width: 100%;
+		height: 100%;
+		z-index: 50;
+		background-color: black;
+		opacity: 0.6;
 	}
-}
-
-@keyframes rotate {
-	from {
-		transform: rotate(0deg);
+	
+	.modal-box {
+		width: 70vw;
+		height: 20vh;
+		padding: 30px;
+		border-radius: 10px;
+		position: absolute;
+		z-index: 100;
+		background-color: pink;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.close-button-box {
+		width: 100%;
+		height: 10%;
+		display: flex;
+		justify-content: end;
 	}
 
-	to {
-		transform: rotate(1080deg);
+	.close-button {
+		display: flex;
+		align-items: center;
+		background-color: transparent;
+		border: none;
+	}
+
+	.title-box {
+		width: 100%;
+		height: 20%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.title {
+		font-size: 70px;
+	}
+
+	.find-button-box {
+		width: 100%;
+		height: 70%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.find-button {
+		border-radius: 100px;
+		width: 80%;
+		height: 40%;
+	}
+
+	.find-button-text {
+		font-size: 40px;
+		font-family: 'BMJUA';
 	}
 }
